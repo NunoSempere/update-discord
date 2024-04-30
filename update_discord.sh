@@ -1,8 +1,8 @@
 function update_discord(){
   verbose=1
 
-  mkdir -p "$HOME/Downloads/discord-update"
-  cd "$HOME/Downloads/discord-update"
+  mkdir -p "$HOME/Downloads/update-discord"
+  cd "$HOME/Downloads/update-discord"
   curl -L -I "https://discord.com/api/download/stable?platform=linux&format=deb" -o discord.head
 
   uri_old="$(cat discord.head.old | grep location | sed 's/location: //' )"
